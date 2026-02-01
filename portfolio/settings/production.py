@@ -5,6 +5,9 @@ DEBUG = False
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
+if not SECRET_KEY:
+    raise Exception("SECRET_KEY is missing in environment variables")
+
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 
 DATABASES = {
