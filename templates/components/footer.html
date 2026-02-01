@@ -1,0 +1,26 @@
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <p class="text-lg font-semibold">Portfolio</p>
+                <p class="text-gray-400">Full Stack Developer</p>
+            </div>
+            
+            <div class="flex space-x-6">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                    GitHub
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                    LinkedIn
+                </a>
+                <a href="{% url 'contact:form' %}" class="text-gray-400 hover:text-white transition-colors">
+                    Contact
+                </a>
+            </div>
+        </div>
+        
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+            <p>&copy; {% now "Y" %} Portfolio. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

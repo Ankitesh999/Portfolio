@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - Portfolio{% endblock %}
+
+{% block content %}
+<section class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto">
+            <h1 class="text-4xl font-bold mb-8 text-center">Get In Touch</h1>
+            
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <p class="text-gray-700 mb-8 text-center">
+                    Have a project in mind or want to collaborate? I'd love to hear from you!
+                </p>
+                
+                <!-- Contact Form with HTMX -->
+                <div id="contact-form-container">
+                    <form 
+                        hx-post="{% url 'contact:form' %}"
+                        hx-target="#contact-form-container"
+                        hx-swap="innerHTML"
+                        class="space-y-6"
+                    >
+                        {% csrf_token %}
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="{{ form.name.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                                {{ form.name }}
+                                {% if form.name.errors %}
+                                    <p class="mt-1 text-sm text-red-600">{{ form.name.errors.0 }}</p>
+                                {% endif %}
+                            </div>
+                            
+                            <div>
+                                <label for="{{ form.email.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                {{ form.email }}
+                                {% if form.email.errors %}
+                                    <p class="mt-1 text-sm text-red-600">{{ form.email.errors.0 }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="{{ form.subject.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
+                            {{ form.subject }}
+                            {% if form.subject.errors %}
+                                <p class="mt-1 text-sm text-red-600">{{ form.subject.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div>
+                            <label for="{{ form.message.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            {{ form.message }}
+                            {% if form.message.errors %}
+                                <p class="mt-1 text-sm text-red-600">{{ form.message.errors.0 }}</p>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="text-center">
+                            <button 
+                                type="submit" 
+                                class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                            >
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="mt-12 text-center">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <div class="text-3xl mb-2">📧</div>
+                        <h3 class="font-semibold">Email</h3>
+                        <p class="text-gray-600">hello@example.com</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">💼</div>
+                        <h3 class="font-semibold">LinkedIn</h3>
+                        <p class="text-gray-600">linkedin.com/in/yourname</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">🐙</div>
+                        <h3 class="font-semibold">GitHub</h3>
+                        <p class="text-gray-600">github.com/yourname</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

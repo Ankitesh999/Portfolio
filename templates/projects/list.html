@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects - Portfolio{% endblock %}
+
+{% block content %}
+<section class="py-20">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold mb-8 text-center">My Projects</h1>
+        
+        {% if projects %}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for project in projects %}
+                    {% include 'components/project_card.html' with project=project %}
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="text-center text-gray-600 py-12">
+                <p class="text-xl">No projects available yet. Check back soon!</p>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

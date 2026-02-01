@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}About Me - Portfolio{% endblock %}
+
+{% block content %}
+<section class="py-20">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold mb-8 text-center">About Me</h1>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://via.placeholder.com/400x400" alt="Profile" class="rounded-lg shadow-lg">
+                </div>
+                
+                <div>
+                    <h2 class="text-2xl font-semibold mb-4">Full Stack Developer</h2>
+                    <p class="text-gray-700 mb-6">
+                        I'm a passionate developer with extensive experience in building web applications using Python, Django, and modern frontend technologies. 
+                        My journey in web development started several years ago, and since then I've been committed to creating clean, efficient, and scalable solutions.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        I specialize in backend development with Django, but I'm equally comfortable working with frontend technologies like HTML, CSS, JavaScript, and modern frameworks. 
+                        I believe in writing clean, maintainable code and following best practices in software development.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Skills Section -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center">Skills & Technologies</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <h4 class="font-semibold text-lg mb-2">Backend</h4>
+                        <ul class="text-gray-600">
+                            <li>Python</li>
+                            <li>Django</li>
+                            <li>PostgreSQL</li>
+                            <li>REST APIs</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-semibold text-lg mb-2">Frontend</h4>
+                        <ul class="text-gray-600">
+                            <li>HTML/CSS</li>
+                            <li>JavaScript</li>
+                            <li>Tailwind CSS</li>
+                            <li>HTMX</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-semibold text-lg mb-2">Tools</h4>
+                        <ul class="text-gray-600">
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>Nginx</li>
+                            <li>CI/CD</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-semibold text-lg mb-2">Other</h4>
+                        <ul class="text-gray-600">
+                            <li>SQL</li>
+                            <li>Linux</li>
+                            <li>Cloud Platforms</li>
+                            <li>Testing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

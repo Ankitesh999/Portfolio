@@ -1,0 +1,35 @@
+<nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center">
+                <a href="{% url 'pages:home' %}" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
+                    Portfolio
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="{% url 'pages:home' %}" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                <a href="{% url 'pages:about' %}" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+                <a href="{% url 'projects:list' %}" class="text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
+                <a href="{% url 'contact:form' %}" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button class="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu (hidden by default) -->
+        <div class="hidden md:hidden pb-4">
+            <a href="{% url 'pages:home' %}" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+            <a href="{% url 'pages:about' %}" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">About</a>
+            <a href="{% url 'projects:list' %}" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
+            <a href="{% url 'contact:form' %}" class="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+        </div>
+    </div>
+</nav>
