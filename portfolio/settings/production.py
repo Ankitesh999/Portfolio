@@ -8,7 +8,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 if not SECRET_KEY:
     raise Exception("SECRET_KEY is missing in environment variables")
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = [
+    "portfolio-iawd.onrender.com",
+    "ankiteshtiwari.in",
+    "www.ankiteshtiwari.in",
+]
 
 DATABASES = {
     'default': {
