@@ -37,7 +37,11 @@ CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = False
 SECURE_HSTS_SECONDS = 0
-CSRF_TRUSTED_ORIGINS = [f"https://{host}" for host in ALLOWED_HOSTS if host]
+CSRF_TRUSTED_ORIGINS = [
+    "https://portfolio-iawd.onrender.com",
+    "https://ankiteshtiwari.in",
+    "https://www.ankiteshtiwari.in",
+]
 
 # Email settings
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
