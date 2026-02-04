@@ -1,17 +1,29 @@
-<nav class="bg-white shadow-lg sticky top-0 z-50">
+<nav class="bg-white shadow-lg sticky top-0 z-50 backdrop-blur-lg bg-opacity-95">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4">
             <div class="flex items-center">
-                <a href="{% url 'pages:home' %}" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
-                    Portfolio
+                <a href="{% url 'pages:home' %}" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-all duration-300 hover:scale-105">
+                    Ankitesh Tiwari
                 </a>
             </div>
             
-            <div class="hidden md:flex space-x-6">
-                <a href="{% url 'pages:home' %}" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-                <a href="{% url 'pages:about' %}" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-                <a href="{% url 'projects:list' %}" class="text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
-                <a href="{% url 'contact:form' %}" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="{% url 'pages:home' %}" class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative group">
+                    Home
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="{% url 'pages:about' %}" class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative group">
+                    About
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="{% url 'projects:list' %}" class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative group">
+                    Projects
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="{% url 'contact:form' %}" class="text-gray-700 hover:text-blue-600 transition-all duration-300 relative group">
+                    Contact
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
             </div>
             
             <!-- Mobile menu button -->

@@ -1,26 +1,48 @@
-<footer class="bg-gray-800 text-white py-8">
+<footer class="bg-gray-900 text-white py-12">
     <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <p class="text-lg font-semibold">Portfolio</p>
-                <p class="text-gray-400">Full Stack Developer</p>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Professional Title -->
+            <div>
+                <h3 class="text-xl font-bold mb-3">Ankitesh Tiwari</h3>
+                <p class="text-blue-400 font-medium mb-4">Applied AI & Machine Learning Engineer</p>
+                <p class="text-gray-400 text-sm">
+                    Research-driven. Data-centric. Built for real systems.
+                </p>
             </div>
             
-            <div class="flex space-x-6">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
-                    GitHub
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
-                    LinkedIn
-                </a>
-                <a href="{% url 'contact:form' %}" class="text-gray-400 hover:text-white transition-colors">
-                    Contact
-                </a>
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <div class="space-y-2">
+                    <a href="{% url 'pages:home' %}" class="block text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="{% url 'pages:about' %}" class="block text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="{% url 'projects:list' %}" class="block text-gray-400 hover:text-white transition-colors">Projects</a>
+                    <a href="{% url 'contact:form' %}" class="block text-gray-400 hover:text-white transition-colors">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Connect -->
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                <div class="space-y-3">
+                    <a href="mailto:ankitesh@zohomail.in" class="flex items-center text-gray-400 hover:text-white transition-colors">
+                        <span class="mr-2">📧</span> ankitesh@zohomail.in
+                    </a>
+                    <a href="https://github.com/Ankitesh999" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-400 hover:text-white transition-colors">
+                        <span class="mr-2">💻</span> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/ankiteshtiwari/" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-400 hover:text-white transition-colors">
+                        <span class="mr-2">💼</span> LinkedIn
+                    </a>
+                    <a href="{% url 'pages:download_resume' %}" class="flex items-center text-gray-400 hover:text-white transition-colors">
+                        <span class="mr-2">📄</span> Download Resume
+                    </a>
+                </div>
             </div>
         </div>
         
-        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-            <p>&copy; {% now "Y" %} Portfolio. All rights reserved.</p>
+        <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400">
+            <p>&copy; {% now "Y" %} Ankitesh Tiwari. All rights reserved.</p>
         </div>
     </div>
 </footer>

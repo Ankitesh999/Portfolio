@@ -28,6 +28,13 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# Media files for production
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# Serve media files in production via Django (for small files like resume)
+# Note: For production with many media files, use proper file storage service
+
 # Security settings for production
 SECURE_SSL_REDIRECT = False  # Platform handles HTTPS
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

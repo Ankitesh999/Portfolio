@@ -6,64 +6,108 @@
 <section class="py-20">
     <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl font-bold mb-8 text-center">About Me</h1>
+            <div class="text-center mb-16">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">About Me</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Applied AI & Machine Learning Engineer focused on research-driven solutions and real-world impact</p>
+        </div>
             
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://via.placeholder.com/400x400" alt="Profile" class="rounded-lg shadow-lg">
+            <div class="grid md:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
+                <div class="pr-8">
+                    <h2 class="text-2xl font-bold mb-8 text-gray-900">Applied AI & Machine Learning Engineer</h2>
+                    <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                        <p>
+                            I'm an AI & Machine Learning engineer focused on applied research, disciplined experimentation, and building robust models. 
+                            I'm particularly interested in data-centric AI, model generalization, and scalable ML systems.
+                        </p>
+                        <p>
+                            My work combines theoretical understanding with practical implementation, ensuring that models not only perform well in controlled environments 
+                            but also generalize effectively in real-world scenarios. I believe in rigorous evaluation methodologies and systematic approaches to ML development.
+                        </p>
+                        <a href="{% url 'pages:download_resume' %}" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-all duration-300 hover:shadow-lg mt-8">
+                            📄 Download Resume
+                        </a>
+                    </div>
                 </div>
                 
                 <div>
-                    <h2 class="text-2xl font-semibold mb-4">Full Stack Developer</h2>
-                    <p class="text-gray-700 mb-6">
-                        I'm a passionate developer with extensive experience in building web applications using Python, Django, and modern frontend technologies. 
-                        My journey in web development started several years ago, and since then I've been committed to creating clean, efficient, and scalable solutions.
-                    </p>
-                    <p class="text-gray-700 mb-6">
-                        I specialize in backend development with Django, but I'm equally comfortable working with frontend technologies like HTML, CSS, JavaScript, and modern frameworks. 
-                        I believe in writing clean, maintainable code and following best practices in software development.
-                    </p>
+                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 border border-blue-100 shadow-lg">
+                        <h3 class="text-2xl font-bold mb-8 text-gray-900">Quick Facts</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-3xl">🎓</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 text-lg">Education</div>
+                                    <div class="text-gray-700 font-medium">B.Tech AIML (2023–2027)</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="text-3xl">🔬</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 text-lg">Research Focus</div>
+                                    <div class="text-gray-700 font-medium">Applied ML Research</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="text-3xl">📊</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 text-lg">Specialization</div>
+                                    <div class="text-gray-700 font-medium">Data-centric AI</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="text-3xl">⚙️</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 text-lg">Expertise</div>
+                                    <div class="text-gray-700 font-medium">End-to-end ML pipelines</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <!-- Skills Section -->
-            <div class="mt-16">
-                <h3 class="text-2xl font-semibold mb-8 text-center">Skills & Technologies</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="text-center">
-                        <h4 class="font-semibold text-lg mb-2">Backend</h4>
-                        <ul class="text-gray-600">
-                            <li>Python</li>
-                            <li>Django</li>
-                            <li>PostgreSQL</li>
-                            <li>REST APIs</li>
+            <div class="mt-20">
+                <h3 class="text-3xl font-bold mb-12 text-center">Technical Expertise</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+                        <div class="text-3xl mb-4 text-center">🧠</div>
+                        <h4 class="font-bold text-lg mb-4 text-center text-blue-900">Machine Learning</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• Scikit-learn</li>
+                            <li>• PyTorch</li>
+                            <li>• TensorFlow</li>
+                            <li>• ML Algorithms</li>
                         </ul>
                     </div>
-                    <div class="text-center">
-                        <h4 class="font-semibold text-lg mb-2">Frontend</h4>
-                        <ul class="text-gray-600">
-                            <li>HTML/CSS</li>
-                            <li>JavaScript</li>
-                            <li>Tailwind CSS</li>
-                            <li>HTMX</li>
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+                        <div class="text-3xl mb-4 text-center">📊</div>
+                        <h4 class="font-bold text-lg mb-4 text-center text-green-900">Data Science</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• Pandas & NumPy</li>
+                            <li>• Data Analysis</li>
+                            <li>• Statistical Modeling</li>
+                            <li>• Feature Engineering</li>
                         </ul>
                     </div>
-                    <div class="text-center">
-                        <h4 class="font-semibold text-lg mb-2">Tools</h4>
-                        <ul class="text-gray-600">
-                            <li>Git</li>
-                            <li>Docker</li>
-                            <li>Nginx</li>
-                            <li>CI/CD</li>
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+                        <div class="text-3xl mb-4 text-center">⚙️</div>
+                        <h4 class="font-bold text-lg mb-4 text-center text-purple-900">ML Systems</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• Evaluation Metrics</li>
+                            <li>• Model Optimization</li>
+                            <li>• Generalization</li>
+                            <li>• Experimental Design</li>
                         </ul>
                     </div>
-                    <div class="text-center">
-                        <h4 class="font-semibold text-lg mb-2">Other</h4>
-                        <ul class="text-gray-600">
-                            <li>SQL</li>
-                            <li>Linux</li>
-                            <li>Cloud Platforms</li>
-                            <li>Testing</li>
+                    <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
+                        <div class="text-3xl mb-4 text-center">🛠️</div>
+                        <h4 class="font-bold text-lg mb-4 text-center text-orange-900">Tools & Stack</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li>• Python</li>
+                            <li>• Streamlit</li>
+                            <li>• Git & Linux</li>
+                            <li>• Cloud Platforms</li>
                         </ul>
                     </div>
                 </div>
