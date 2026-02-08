@@ -19,13 +19,21 @@
         <!-- Problem Statement -->
         <p class="text-gray-700 mb-4 leading-relaxed">{{ project.description }}</p>
         
-        <!-- Why It Matters (extracted from content) -->
+        <!-- Key Outcomes -->
         <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 mb-6 border-l-4 border-blue-500">
-            <p class="text-sm font-semibold text-gray-900 mb-1">Why it matters:</p>
+            <p class="text-sm font-semibold text-gray-900 mb-2">Key Outcomes:</p>
             {% if 'research' in project.title|lower %}
-                <p class="text-blue-700 font-medium">Focus on experimental rigor and understanding model generalization behavior.</p>
+                <ul class="text-blue-700 text-sm space-y-1">
+                    <li>• Analyzed generalization across non-IID datasets</li>
+                    <li>• Designed controlled experiments for model stability</li>
+                    <li>• Focus on reproducibility & ablation studies</li>
+                </ul>
             {% else %}
-                <p class="text-green-700 font-medium">Designed to reduce skill mismatch through data-driven recommendations.</p>
+                <ul class="text-green-700 text-sm space-y-1">
+                    <li>• Reduced skill mismatch via vector-based matching</li>
+                    <li>• Hybrid rule-based + ML system architecture</li>
+                    <li>• Live demo with real-time recommendations</li>
+                </ul>
             {% endif %}
         </div>
         

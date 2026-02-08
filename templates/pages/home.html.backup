@@ -7,7 +7,7 @@
 <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
     <div class="container mx-auto px-4 text-center">
         <h1 class="text-5xl font-bold mb-6">ML Engineer building reliable, data-driven ML systems</h1>
-        <p class="text-xl mb-8 text-blue-100">From experiments to deployment - focused on evaluation, generalization, and data-centric ML</p>
+        <p class="text-xl mb-8 text-blue-100">From experiments to deployment — focused on model evaluation, generalization, and data-centric systems</p>
         <div class="flex flex-wrap gap-4 justify-center">
             <a href="{% url 'pages:download_resume' %}" class="bg-green-600 text-white px-12 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors shadow-lg text-lg transform hover:scale-105">📄 Download Resume</a>
             <a href="{% url 'projects:list' %}" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">View Projects</a>
@@ -21,6 +21,9 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Real-world applications of AI/ML research, from experimental analysis to production systems
+            </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {% for project in featured_projects %}
@@ -39,46 +42,38 @@
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold text-gray-900 mb-6">My Approach</h2>
             <p class="text-xl text-gray-700 mb-8 leading-relaxed">
-                Applied ML engineer focused on rigorous evaluation and real-world systems
+                Applied AI & Machine Learning engineer focused on research-driven solutions and real-world impact
             </p>
             
-            <!-- Approach Cards -->
+            <!-- Approach Bullets -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-left">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                            <span class="text-sm opacity-70">🧪</span>
-                        </div>
+                <div class="text-left md:text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl">📊</span>
                     </div>
-                    <h3 class="font-extrabold text-gray-800 tracking-wide mb-2">Model evaluation & generalization</h3>
-                    <p class="text-sm text-gray-600">Cross-domain testing · Metric sensitivity checks</p>
+                    <h3 class="font-semibold text-gray-900">Data-centric experimentation</h3>
+                    <p class="text-sm text-gray-600">→ Dataset refinement, error analysis, feature audits</p>
                 </div>
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-left">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                            <span class="text-sm opacity-70">📊</span>
-                        </div>
+                <div class="text-left md:text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl">🧪</span>
                     </div>
-                    <h3 class="font-extrabold text-gray-800 tracking-wide mb-2">Data-centric experimentation</h3>
-                    <p class="text-sm text-gray-600">Dataset refinement · Error analysis · Feature audits</p>
+                    <h3 class="font-semibold text-gray-900">Model evaluation & generalization</h3>
+                    <p class="text-sm text-gray-600">→ Cross-domain testing, metric sensitivity checks</p>
                 </div>
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-left">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
-                            <span class="text-sm opacity-70">🔬</span>
-                        </div>
+                <div class="text-left md:text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl">🔬</span>
                     </div>
-                    <h3 class="font-extrabold text-gray-800 tracking-wide mb-2">Applied research mindset</h3>
-                    <p class="text-sm text-gray-600">Hypothesis-driven experiments · Ablation studies</p>
+                    <h3 class="font-semibold text-gray-900">Applied research mindset</h3>
+                    <p class="text-sm text-gray-600">→ Hypothesis-driven experiments, ablation studies</p>
                 </div>
-                <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm text-left">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                            <span class="text-sm opacity-70">⚙️</span>
-                        </div>
+                <div class="text-left md:text-center">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-2xl">⚙️</span>
                     </div>
-                    <h3 class="font-extrabold text-gray-800 tracking-wide mb-2">End-to-end ML systems</h3>
-                    <p class="text-sm text-gray-600">Preprocessing · Feature engineering · Inference pipelines</p>
+                    <h3 class="font-semibold text-gray-900">End-to-end ML systems</h3>
+                    <p class="text-sm text-gray-600">→ From preprocessing to inference pipelines</p>
                 </div>
             </div>
             
