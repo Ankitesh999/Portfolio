@@ -21,6 +21,7 @@ if not SECRET_KEY:
 
 ALLOWED_HOSTS = [
     "portfolio-iawd.onrender.com",
+    "portfolio-pr-1.onrender.com",
     "ankiteshtiwari.in",
     "www.ankiteshtiwari.in",
 ]
@@ -54,6 +55,7 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = False
 SECURE_HSTS_SECONDS = 0
 CSRF_TRUSTED_ORIGINS = [
     "https://portfolio-iawd.onrender.com",
+    "https://portfolio-pr-1.onrender.com",
     "https://ankiteshtiwari.in",
     "https://www.ankiteshtiwari.in",
 ]

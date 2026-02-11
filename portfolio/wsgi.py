@@ -11,6 +11,9 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
+# Load settings from the Django settings package. The actual
+# environment-specific settings are selected in portfolio/settings/__init__.py
+# (development vs production) to work with render/proxy environments.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portfolio.settings')
 
 application = get_wsgi_application()
