@@ -20,8 +20,10 @@ if not SECRET_KEY:
     raise Exception("SECRET_KEY is missing in environment variables")
 
 ALLOWED_HOSTS = [
+    ".onrender.com",  # allow all Render preview/production subdomains
     "portfolio-iawd.onrender.com",
     "portfolio-pr-1.onrender.com",
+    "portfolio-pr-1-side.onrender.com",
     "ankiteshtiwari.in",
     "www.ankiteshtiwari.in",
 ]
@@ -56,6 +58,7 @@ SECURE_HSTS_SECONDS = 0
 CSRF_TRUSTED_ORIGINS = [
     "https://portfolio-iawd.onrender.com",
     "https://portfolio-pr-1.onrender.com",
+    "https://portfolio-pr-1-side.onrender.com",
     "https://ankiteshtiwari.in",
     "https://www.ankiteshtiwari.in",
 ]
