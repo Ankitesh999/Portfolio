@@ -1,6 +1,16 @@
 import os
 import dj_database_url
+from pathlib import Path
 from .base import *
+from dotenv import load_dotenv
+
+# Load environment variables from .env if present (local development)
+BASE_DIR_PATH = Path(__file__).resolve().parent.parent
+ENV_PATH = BASE_DIR_PATH / '.env'
+try:
+    load_dotenv(dotenv_path=ENV_PATH)
+except Exception:
+    pass
 
 DEBUG = False
 
@@ -49,9 +59,16 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 # Email settings
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
+# Email configuration
+# Provide sensible defaults for free Gmail SMTP on Render or similar hosting.
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
 EMAIL_PORT = int(os.environ.get('EMAIL_PORT', '587'))
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True')
+try:
+    EMAIL_USE_TLS = EMAIL_USE_TLS.lower() in ('true', '1', 't')
+except Exception:
+    EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+# If a default from email isn't provided, fall back to the host user when available
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
