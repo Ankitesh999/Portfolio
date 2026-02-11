@@ -12,6 +12,7 @@ logger = logging.getLogger(__name__)
 
 
 def contact_form(request):
+    mail_sent = False
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -37,12 +38,20 @@ def contact_form(request):
                     recipient_list,
                     fail_silently=False,
                 )
-            except Exception as e:
+                mail_sent = True
+            except (Exception, SystemExit) as e:
                 # Do not crash the user flow; log the error for troubleshooting
                 logger.exception("Failed to send contact form email: %s", e)
+                mail_sent = False
 
-            messages.success(request, 'Thank you for your message! I\'ll get back to you soon.')
-            form = ContactForm()  # Reset form after successful submission
+            if mail_sent:
+                from django.contrib import messages as django_messages
+                django_messages.success(request, 'Thank you for your message! I\'ll get back to you soon.')
+            else:
+                from django.contrib import messages as django_messages
+                django_messages.warning(request, 'Thanks for reaching out. We could not email this submission right now; we saved it locally and will follow up manually.')
+
+            form = ContactForm()  # Reset form after handling
             # If the request is an HTMX request, return only the partial form to swap in
             if request.headers.get('Hx-Request') or request.headers.get('HX-Request'):
                 from django.template.loader import render_to_string
@@ -50,7 +59,6 @@ def contact_form(request):
                 return HttpResponse(html)
     else:
         form = ContactForm()
-    
     context = {
         'form': form,
     }
