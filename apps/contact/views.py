@@ -16,5 +16,9 @@ def contact_form(request):
     
     context = {
         'form': form,
+        'whatsapp_number': '916269878574',
+        'email_address': 'ankitesh@zohomail.in',
+        'linkedin_url': 'https://www.linkedin.com/in/ankiteshtiwari/',
+        'whatsapp_prefill': 'Hello, I found your portfolio and would like to discuss a potential collaboration.'
     }
     return render(request, 'contact/form.html', context)
